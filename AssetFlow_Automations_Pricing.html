@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing-AssetFlow Automations</title>
+    <style>
+        /* General Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header Styling */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #080027;
+            padding: 20px 50px;
+            z-index: 1000; /* To make sure header stays on top */
+        }
+
+        /* Content inside the header */
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            margin-left: 100px;
+            margin-right: 20px;
+        }
+
+        h0 {
+            color: white;
+            font-family: 'Horizon', sans-serif;
+            font-size: 60px;
+            flex-grow: 1;
+        }
+        h1 {
+            color: white;
+            font-family: 'Horizon', sans-serif;
+            font-size: 36px;
+            flex-grow: 1;
+        }
+        h2 {
+            color: black;
+            font-family: 'Horizon', sans-serif;
+            font-size: 90px;
+            flex-grow: 1;
+        }
+        h3 {
+            color: black;
+            font-family: 'Horizon', sans-serif;
+            font-size: 70px;
+            flex-grow: 1;
+        }
+        h4 {
+            color: black;
+            font-family: 'Horizon', sans-serif;
+            font-size: 30px;
+            flex-grow: 1;
+        }
+        h5 {
+            color: black;
+            font-family: 'Horizon', sans-serif;
+            font-size: 20px;
+            flex-grow: 1;
+        }
+        h6 {
+            color: black;
+            font-family: 'Horizon', sans-serif;
+            font-size: 15px;
+            flex-grow: 1;
+        }
+        h7 {
+            color: black;
+            font-family: 'Horizon', sans-serif;
+            font-size: 10px;
+            flex-grow: 1;
+        }
+        h8 {
+            color: black;
+            font-family: 'Horizon', sans-serif;
+            font-size: 8px;
+            flex-grow: 1;
+        }
+        h9 {
+            color: black;
+            font-family: 'Horizon', sans-serif;
+            font-size: 6px;
+            flex-grow: 1;
+        }
+        h10 {
+            color: black;
+            font-family: 'Horizon', sans-serif;
+            font-size: 4px;
+            flex-grow: 1;
+        }
+
+        nav {
+            display: flex;
+            gap: 150px;
+        }
+
+        nav button {
+            background-color: transparent;
+            border: 2px solid #EFFE8A;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        nav button:hover {
+            background-color: #EFFE8A;
+            color: #080027;
+        }
+          /* Divider line styling */
+        .divider {
+            width: 100%;
+            height: 30px;
+            background-color: #EFFE8A; /* Yellow color */
+            margin-top: 100px; /* Space to avoid overlap with fixed header */
+        }
+
+        /* Ensuring header doesn't overlap content */
+        body {
+            padding-top: 100px; /* Adjust based on the height of your header */
+        }
+    </style>
+</head>
+
+ <header>
+        <div class="header-content">
+            <!-- Company Logo -->
+            <img src="AssetFlow.png" alt="AssetFlow Automations Logo" class="logo">
+            
+            <!-- Company Name -->
+            <h1>AssetFlow Automations</h1>
+            
+            <!-- Navigation Buttons -->
+            <nav>
+                <button onclick="location.href='assetflowautomations.com'">Home</button>
+                <button onclick="location.href='pricing.assetflowautomations.com'">Pricing</button>
+                <button onclick="scrollToSection('footer')">Contact</button>
+            </nav>
+        </div>
+    </header>
+
+    
+<script>
+  function scrollToSection(sectionID) {
+    const section = document.getElementById(sectionID);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+</script>
+
+
+<!-- Yellow Divider Line -->
+<div class="divider"></div>
+
+    
+<body style="color: white; background-color: #080027; font-family: Arial, sans-serif; padding: 0; margin: 0;">
+    <div style="display: flex; justify-content: space-between; margin: 100px 100px 0;">
+        <!-- Group 1 left hand side-->
+        <div class="group" style="width: 45%; text-align: center;">
+            <img src="1_time_Payment.webp" alt="" style="height: 226px; width: 250px; margin-bottom: 20px;">
+            <h4 style="color: white;">Data Entry Solutions</h4>
+            <h6 class="intro-text" style="color: white;">
+                Get a custom automation system for your business with a One-Time Payment.
+            </h6>
+            <button class="read-more-btn" onclick="openOverlay(1)">See More</button>
+        </div>
+
+        <!-- Group 2 right hand side-->
+        <div class="group" style="width: 45%; text-align: center;">
+            <img src="retainer.webp" alt="" style="height: 219px; width: 250px; margin-bottom: 20px;">
+            <h4 style="color: white;">System Management</h4>
+            <h6 class="intro-text" style="color: white;">
+                AssetFlow Automation will manage your system so that it is up-to-date with legal laws, compliance regulations and more.<br>The system may also be edited to add/minus tasks, with 5 free edits per month.
+            </h6>
+            <button class="read-more-btn" onclick="openOverlay(2)">Read More</button>
+        </div>
+    </div>
+
+    <!-- Backdrop for all Overlays -->
+    <div class="backdrop" onclick="closeOverlay()" style="display: none;"></div>
+
+    <!-- Overlay Content for Each Group -->
+    <!--left hand side -->
+    <div class="overlay" id="overlay-1">
+        <button class="close-btn" onclick="closeOverlay()">×</button>
+        <p>
+This Package includes:<br><br>
+- 1 time payment
+<br><br>
+- Access to all files and guidance on how to install them
+<br><br>
+- Ability to self-edit and self-modify
+<br><br>
+- Personalised System
+<br><br>
+- Extra support until 7 after the end of service
+        </p>
+    </div>
+
+<br><br><br>    
+        <center><h5 style="color: white;">Note:<br>
+-Payments are different for each client due to the custom systems that we make to suit the specific business.<br><br>
+-No payments are made on this website. We collect payment for our service near the end of our converstaion with each client.<br>
+Conversations take place through Email, although conversations can also take place through Whatsapp if requested.<br><br>
+<br><br>
+-Prices may vary from £500 to £5000 depending on the complexity of the system.<br><br>
+-2 or more systems can also be intertwined with each other, but you must request this when describing your system.<br><br>
+-A pre-payment of £100 must be made before the service begins,<br>you will be made aware of this during the process and at the specific time that we require the pre-payment.<br><br><br><br>
+-For assistance, contact: 
+                <ul><a style="color: #EFFE8A;" href='mailto:support@assetflowautomations.com'">support@assetflowautomations.com</a>
+</ul>
+</h5></center>
+    
+
+
+    <!--right hand side -->
+    <div class="overlay" id="overlay-2">
+        <button class="close-btn" onclick="closeOverlay()">×</button>
+        <p>
+This Package includes:<br><br>
+​- Monthly/Yearly plans available
+<br><br>
+- Hands-off experience
+<br><br>
+- Access to all files and guidance on how to install them if requested
+<br><br>
+- Ability to edit and modify on request*
+<br><br>
+- Personalised System
+<br><br>
+- Priority Support
+<br><br>
+- System Updates to ensure accurate and up-to-date informations that adheres to relevant Laws and Regulations​
+<br><br><br><br>
+*Some modifications may contain more fees depending on the features that are added ​
+        </p>
+    </div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+    <!-- JavaScript for overlay functionality -->
+    <script>
+        function openOverlay(id) {
+            document.querySelectorAll(".overlay").forEach(overlay => overlay.classList.remove("visible"));
+            document.getElementById(`overlay-${id}`).classList.add("visible");
+            document.querySelector(".backdrop").classList.add("visible");
+        }
+
+        function closeOverlay() {
+            document.querySelectorAll(".overlay").forEach(overlay => overlay.classList.remove("visible"));
+            document.querySelector(".backdrop").classList.remove("visible");
+        }
+    </script>
+
+    <!-- CSS for the overlay and backdrop styling -->
+    <style>
+        /* Overlay styling with grey background and white text */
+        .overlay {
+            position: fixed;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 600px;
+            max-height: 80vh;
+            overflow-y: auto;
+            background: grey;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            display: none;
+            z-index: 10;
+        }
+
+        .overlay.visible {
+            display: block;
+        }
+
+        .backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: none;
+            z-index: 5;
+        }
+
+        .backdrop.visible {
+            display: block;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            color: white;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+<script type="text/javascript">
+  (function(d, t) {
+      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      v.onload = function() {
+        window.voiceflow.chat.load({
+          verify: { projectID: '672f9a87dd74c835a2761c60' },
+          url: 'https://general-runtime.voiceflow.com',
+          versionID: 'production'
+        }).then(() => {
+          window.voiceflow.chat.proactive.clear(); // clear all previous messages
+          
+          // Add a 5-second delay before showing the message
+          setTimeout(() => {
+            window.voiceflow.chat.proactive.push({ 
+              type: 'text', 
+              payload: { message: "I'm here if you need any help." }
+            }); 
+          }, 5000); // 5000 milliseconds = 5 seconds
+        });
+      };
+      v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; 
+      v.type = "text/javascript"; 
+      s.parentNode.insertBefore(v, s);
+  })(document, 'script');
+</script>
+
+</body>
+
+
+
+<!-- Footer with Subscribe Form -->
+<footer id="footer"; class= "footer"; style="background-color: #EFFE8A; padding: 20px; text-align: center;">
+    <!-- Footer Heading -->
+    <h2 style="color: black; margin-bottom: 10px;">AssetFlow Automations</h2>
+
+    <!-- Subscribe Form -->
+    <form id="subscribeForm" action="#" method="POST" onsubmit="submitToAirtable(event)">
+        <!-- Subscribe Heading -->
+        <h6 style="color: black;">Subscribe to our newsletter</h6>
+
+        <!-- Email Prompt -->
+        <h7 style="color: black; display: block; margin-top: 10px;">Enter your email</h7>
+
+        <!-- Email Input Field -->
+        <div style="margin: 10px auto; width: 60%; position: relative;">
+            <input 
+                type="email" 
+                name="email" 
+                placeholder="example@email.com" 
+                style="display: block; width: 100%; padding: 8px; border: none; border-bottom: 1px solid black; color: red; text-align: center;"
+                required>
+        </div>
+
+        <!-- Subscribe Button -->
+        <button type="submit" style="background-color: black; color: #EFFE8A; padding: 10px 20px; border: none; border-radius: 20px; cursor: pointer;">
+            Subscribe
+        </button>
+    </form>
+    <br>
+    <br>
+    <h5><ul>Contact Us</ul></h5>
+    <br>
+    <h6>Whatsapp Business: 07887 333872</h6>
+    <br>
+    <h6>support@assetflowautomations.com</h6>
+</footer>
+
+<!-- JavaScript for Airtable Integration -->
+<script>
+    function submitToAirtable(event) {
+        event.preventDefault();
+        const email = document.querySelector('input[name="email"]').value;
+
+        // Replace with your Airtable base ID and table name
+        const baseId = 'appHdf8GqdnnZ8eQE'; // Replace with your Airtable base ID
+        const tableName = 'Table%201'; // Replace with your Airtable table name
+        const airtableUrl = `https://api.airtable.com/v0/${baseId}/${tableName}`;
+
+        // Replace with your Airtable API key
+        const apiKey = 'patb0pXMNIXvXABCA.8225b205c549ce52bb118a86e4df78675668274cff5e6f71d8db0280d854dcff'; // Replace with your Airtable API Key
+
+        // Create the record for Airtable
+        const data = {
+            fields: {
+                Email: email // Replace 'Email' with the actual field name in Airtable
+            }
+        };
+
+        // Make the POST request to Airtable API
+        fetch(airtableUrl, {
+            method: 'POST',
+            headers: {
+                'Authorization': `Bearer ${apiKey}`,
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert('Thank you for subscribing!');
+            document.getElementById('subscribeForm').reset();
+        })
+        .catch(error => console.error('Error:', error));
+    }
+</script>
+
+
+</html>
