@@ -38,14 +38,14 @@
         .logo {
             width: 60px;
             height: 60px;
-            margin-left: 100px;
-            margin-right: 20px;
+            margin-left: 24px;
+            margin-right: 24px;
         }
 
         h0 {
             color: white;
             font-family: 'Horizon', sans-serif;
-            font-size: 60px;
+            font-size: 40px;
             flex-grow: 1;
         }
         h1 {
@@ -57,13 +57,13 @@
         h2 {
             color: black;
             font-family: 'Horizon', sans-serif;
-            font-size: 90px;
+            font-size: 34px;
             flex-grow: 1;
         }
         h3 {
             color: black;
             font-family: 'Horizon', sans-serif;
-            font-size: 70px;
+            font-size: 32px;
             flex-grow: 1;
         }
         h4 {
@@ -127,22 +127,31 @@
             background-color: #EFFE8A;
             color: #080027;
         }
-          /* Divider line styling */
-        .divider {
-            width: 100%;
-            height: 30px;
-            background-color: #EFFE8A; /* Yellow color */
-            margin-top: 100px; /* Space to avoid overlap with fixed header */
-        }
 
         /* Ensuring header doesn't overlap content */
         body {
             padding-top: 100px; /* Adjust based on the height of your header */
         }
+        #mobileWarning {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+      font-size: 1.2rem;
+      text-align: center;
+      padding: 20px;
+      box-sizing: border-box;
+      z-index: 1000;
+        }
     </style>
 </head>
-
- <header>
+    
+<body>
+    <header>
         <div class="header-content">
             <!-- Company Logo -->
             <img src="AssetFlow.png" alt="AssetFlow Automations Logo" class="logo">
@@ -152,8 +161,8 @@
             
             <!-- Navigation Buttons -->
             <nav>
-                <button onclick="location.href='assetflowautomations.com'">Home</button>
-                <button onclick="location.href='pricing.assetflowautomations.com'">Pricing</button>
+                <button onclick="location.href='https://www.assetflowautomations.com/'">Home</button>
+                <button onclick="location.href='https://www.assetflowautomations.com/#about'">About</button>
                 <button onclick="scrollToSection('footer')">Contact</button>
             </nav>
         </div>
@@ -357,7 +366,7 @@ This Package includes:<br><br>
 <!-- Footer with Subscribe Form -->
 <footer id="footer"; class= "footer"; style="background-color: #EFFE8A; padding: 20px; text-align: center;">
     <!-- Footer Heading -->
-    <h2 style="color: black; margin-bottom: 10px;">AssetFlow Automations</h2>
+    <h1 style="color: black; margin-bottom: 10px;">AssetFlow Automations</h1>
 
     <!-- Subscribe Form -->
     <form id="subscribeForm" action="#" method="POST" onsubmit="submitToAirtable(event)">
