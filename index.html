@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="The pricing for systems provided by AssetFlow Automations vary for every business based on what they require. Prices can be anywhere between £500 and £5000, although, in some rare circumstances, prices may be higher that expected.">
     <title>Pricing-AssetFlow Automations</title>
     <style>
         /* General Styling */
@@ -242,23 +243,44 @@
             text-align: center;
         }
 
-        /* Mobile-specific adjustments */
-        @media (max-width: 768px) {
-            .content-container {
-                flex-direction: column;
-                align-items: center;
-                margin: 50px 20px; /* Reduced margins for smaller screens */
-            }
+                /* Mobile-specific styling */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 20px;
+    }
 
-            .group {
-                width: 100%; /* Full width for each group on mobile */
-                margin-bottom: 20px; /* Spacing between stacked groups */
-            }
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
 
-            .group img {
-                width: 80%; /* Scale down image for mobile */
-                height: auto;
-            }
+    .logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    h1 {
+        font-size: 24px;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    nav {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    /* Add top padding or margin to body or main content to prevent overlap */
+    body {
+        padding-top: 160px; /* Adjust this value based on the actual header height */
+    }
+}
         }
     </style>
 </head>
