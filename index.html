@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Pricing-AssetFlow Automations</title>
     <style>
         /* General Styling */
@@ -14,7 +14,12 @@
         }
 
         body {
+            max-width: 100vw;
+            background-color: #080027;
+            color: white;
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
 
         /* Header Styling */
@@ -22,7 +27,7 @@
             position: fixed;
             top: 0;
             left: 0;
-            width: 100%;
+            width: 100vw;
             background-color: #080027;
             padding: 20px 50px;
             z-index: 1000; /* To make sure header stays on top */
@@ -34,8 +39,25 @@
             align-items: center;
             justify-content: space-between;
         }
+        /* Divider styling */
+        .divider {
+            width: 100%;
+            height: 4px; /* Adjust thickness */
+            background-color: #EFFE8A; /* Yellow color */
+            margin: 20px 0; /* Space above and below divider */
+        }
 
+        /* Center content and spacing for header */
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Logo styling */
         .logo {
+            cursor: pointer;
             width: 60px;
             height: 60px;
             margin-left: 24px;
@@ -127,34 +149,143 @@
             background-color: #EFFE8A;
             color: #080027;
         }
+        /* Full-screen overlay for the intro */
+        #intro {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: #EFFE8A;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
 
+        /* Rotating circle with arrows */
+        .spinner {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            animation: rotate 3s linear infinite;
+        }
+
+        /* Rotating circle with arrows */
+        .spinner {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            animation: rotate 3s linear infinite;
+        }
+
+        /* Style for each arrow */
+        .arrow {
+            position: absolute;
+            width: 10px;
+            height: 40px;
+            background-color: #080027;
+            border-radius: 5px; /* Rounded body */
+            top: 0;
+            left: 50%;
+            transform-origin: 50% 40px;
+        }
+
+        /* Custom arrowhead */
+        .arrow:after {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: -5px;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 15px solid #080027; /* Same color as arrow */
+        }
+
+        /* Positioning each arrow at 90-degree intervals */
+        .arrow:nth-child(1) { transform: rotate(0deg); }
+        .arrow:nth-child(2) { transform: rotate(90deg); }
+        .arrow:nth-child(3) { transform: rotate(180deg); }
+        .arrow:nth-child(4) { transform: rotate(270deg); }
+
+        /* Rotation animation */
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Fade-out effect */
+        .fade-out {
+            animation: fadeOut 1s ease forwards;
+        }
+
+        @keyframes fadeOut {
+            to { opacity: 0; visibility: hidden; }
+        }
         /* Ensuring header doesn't overlap content */
         body {
             padding-top: 100px; /* Adjust based on the height of your header */
         }
-        #mobileWarning {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.8);
-      color: white;
-      font-size: 1.2rem;
-      text-align: center;
-      padding: 20px;
-      box-sizing: border-box;
-      z-index: 1000;
+        /* Container for desktop and mobile */
+        .content-container {
+            display: flex;
+            justify-content: space-between;
+            margin: 100px 100px 0;
+            gap: 20px;
+        }
+
+        /* Group styling */
+        .group {
+            width: 45%;
+            text-align: center;
+        }
+
+        /* Mobile-specific adjustments */
+        @media (max-width: 768px) {
+            .content-container {
+                flex-direction: column;
+                align-items: center;
+                margin: 50px 20px; /* Reduced margins for smaller screens */
+            }
+
+            .group {
+                width: 100%; /* Full width for each group on mobile */
+                margin-bottom: 20px; /* Spacing between stacked groups */
+            }
+
+            .group img {
+                width: 80%; /* Scale down image for mobile */
+                height: auto;
+            }
         }
     </style>
 </head>
-    
+
+
 <body>
-    <header>
+    <!-- Intro overlay -->
+    <div id="intro">
+        <div class="spinner">
+            <div class="arrow"></div>
+            <div class="arrow"></div>
+            <div class="arrow"></div>
+            <div class="arrow"></div>
+        </div>
+    </div>
+
+    <!-- Main website content -->
+    <div id="main-content" style="display: none;">
+        <!-- Your main content here -->
+<body style="max-width: 100vw; background-color: #080027;">
+    <header style="max-width: 100vw;">
         <div class="header-content">
             <!-- Company Logo -->
-            <img src="AssetFlow.png" alt="AssetFlow Automations Logo" class="logo">
+            <a href="javascript:location.reload();">
+    <img src="AssetFlow.png" alt="AssetFlow Automations Logo" class="logo" style="cursor: pointer;">
+</a>
+
             
             <!-- Company Name -->
             <h1>AssetFlow Automations</h1>
@@ -183,11 +314,11 @@
 <div class="divider"></div>
 
     
-<body style="color: white; background-color: #080027; font-family: Arial, sans-serif; padding: 0; margin: 0;">
-    <div style="display: flex; justify-content: space-between; margin: 100px 100px 0;">
-        <!-- Group 1 left hand side-->
-        <div class="group" style="width: 45%; text-align: center;">
-            <img src="1_time_Payment.webp" alt="" style="height: 226px; width: 250px; margin-bottom: 20px;">
+<body <!-- Content Container -->
+    <div class="content-container">
+        <!-- Group 1 left-hand side -->
+        <div class="group">
+            <img src="1_time_Payment.webp" alt="One-Time Payment Option" style="height: 226px; width: 250px; margin-bottom: 20px; color: white;">
             <h4 style="color: white;">Data Entry Solutions</h4>
             <h6 class="intro-text" style="color: white;">
                 Get a custom automation system for your business with a One-Time Payment.
@@ -195,9 +326,9 @@
             <button class="read-more-btn" onclick="openOverlay(1)">See More</button>
         </div>
 
-        <!-- Group 2 right hand side-->
-        <div class="group" style="width: 45%; text-align: center;">
-            <img src="retainer.webp" alt="" style="height: 219px; width: 250px; margin-bottom: 20px;">
+        <!-- Group 2 right-hand side -->
+        <div class="group">
+            <img src="retainer.webp" alt="Retainer Option" style="height: 219px; width: 250px; margin-bottom: 20px; style=color: white;">
             <h4 style="color: white;">System Management</h4>
             <h6 class="intro-text" style="color: white;">
                 AssetFlow Automation will manage your system so that it is up-to-date with legal laws, compliance regulations and more.<br>The system may also be edited to add/minus tasks, with 5 free edits per month.
@@ -205,6 +336,7 @@
             <button class="read-more-btn" onclick="openOverlay(2)">Read More</button>
         </div>
     </div>
+
 
     <!-- Backdrop for all Overlays -->
     <div class="backdrop" onclick="closeOverlay()" style="display: none;"></div>
@@ -438,6 +570,14 @@ This Package includes:<br><br>
         .catch(error => console.error('Error:', error));
     }
 </script>
+</div>
 
-
+    <script>
+        // Show main content after intro and hide intro with fade effect
+        setTimeout(() => {
+            document.getElementById("intro").classList.add("fade-out");
+            document.getElementById("main-content").style.display = "block";
+        }, 1000); // 1 second
+    </script>
+</body>
 </html>
