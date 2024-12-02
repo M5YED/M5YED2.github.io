@@ -282,6 +282,7 @@
         box-shadow: 0 0 15px #A52A2A, 0 0 30px #A52A2A; /* Glowing effect */
         transform: scale(1.05); /* Slightly enlarges the button */
     }
+        
     /* Button styling */
     .glow-button2 {
         padding: 10px 20px;
@@ -297,6 +298,17 @@
     /* Glow effect on hover */
     .glow-button2:hover {
         box-shadow: 0 0 15px #054708, 0 0 30px #054708; /* Glowing effect */
+        transform: scale(1.05); /* Slightly enlarges the button */
+    }
+
+    .glow-word {
+        cursor: pointer;
+        display: inline-block; /* Makes the text behave like a block for proper hover effects */    
+    }
+    
+    /* Glow effect on hover */
+    .glow-word:hover {
+        box-shadow: 0 0 15px #A52A2A, 0 0 30px #A52A2A; /* Glowing effect */
         transform: scale(1.05); /* Slightly enlarges the button */
     }
 
@@ -559,18 +571,179 @@
 </div>
 </section>
 
-<section id="next" class="next">
-<div id="next" class="next" 
+<section id="plans" class="plans">
+<div id="plans" class="plans" 
      style="font-family: GP-SB; background-color: #054708; color: #FFFFFF; padding: 20px; max-width: 100vw; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
-    <h3>Next Step</h3>
-    <p style="margin: 10px 0;">Next, check out our services!</p>
-    <nav>
-        <button onclick="location.href='https://service.assetflowautomations.com/'">Service</button>
-    </nav>
+    <h3>Plans</h3>
+    <p style="margin: 10px 0;">We offer 2 types of plans which are listed below.</p>   
+<br>
+    <div style="display: flex; justify-content: center; align-items: center; width: 100%; max-width: 100vw; gap: 10vw; padding: 0 20px; box-sizing: border-box;">
+        
+        <!-- Left Side - One-Time Payment -->
+        <div style="text-align: center;">
+            <img src="Hand-Off.png" alt="hand-off-plan" style="width: 20vw; height: auto; margin-bottom: 20px;">
+            <h3 style="color: #FFFFFF; font-family:'TNR', sans-serif;">Hand-Off</h3><br>
+            <h4 style="color: #FFFFFF; font-size: 15px; font-family:'TNR', sans-serif;">This plan includes:<br>
+                - All files ✅<br><br>
+                - Installation Guidance ✅<br><br>
+                - 7-day Support after completion ✅<br><br>
+                - One-Off Payment ✅<br><br>
+            </h4>
+<br>
+
+            <h4 style="color: #FFFFFF; font-size: 15px; font-family:'TNR', sans-serif;">This plan does not include:<br>
+                - Ongoing Support❌<br><br>
+                - Hands-Free Experience❌<br><br>
+                - Extra Editing After Completion❌<br>
+            </h4>
+
+<button id="hand-off-plan-button" class="glow-button" onclick="window.location.href='https://service.assetflowautomations.com/purchaser/'">
+    Choose This Plan
+</button>
+
+
+</div>        
+        
+
+        <!-- Long Vertical Line in the Center -->
+        <div class="vertical-line" style="width: 2px; background-color: #FFFFFF;"></div>
+            <style>
+                /* General styling for the line */
+                .vertical-line {
+                        background-color: #FFFFFF;
+                }
+
+                /* For desktop (default, vertical line) */
+            @media (min-width: 769px) {
+                .vertical-line {
+                        width: 2px; /* Vertical line on desktop */
+                        height: 100px; /* Adjust this to your desired height */
+                }
+            }
+
+                /* For mobile (horizontal line) */
+            @media (max-width: 768px) {
+                .vertical-line {
+                        width: 100%; /* Full width for horizontal line on mobile */
+                        height: 2px; /* Horizontal line on mobile */
+                }
+            }
+
+            </style>
+            
+
+        <!-- Right side - Reccuring Payment -->
+        <div style="text-align: center;">
+            <img src="Management.png" alt="management-plan" style="width: 20vw; height: auto; margin-bottom: 20px;">
+            <h3 style="color: #FFFFFF; font-family:'TNR', sans-serif;">Management</h3><br>
+            <h4 style="color: #FFFFFF; font-size: 15px; font-family:'TNR', sans-serif;">This plan includes:<br>
+                - All files ✅<br><br>
+                - Installation Guidance ✅<br><br>
+                - Ongoing + Priority Support after completion ✅<br><br>
+                - Monthly/Yearly Payment ✅<br><br>
+                - Hands-Free Experience ✅<br><br>
+                - Extra Editing After Completion* ✅<br>
+            </h4>            
+
+<button id="management-plan-button" class="glow-button" onclick="window.location.href='https://service.assetflowautomations.com/purchaser/management/'">
+   Choose This Plan
+</button>
+        </div>
+    </div>
+    <br><br>
+            <h3 style="color: #FFFFFF; font-family:'TNR', sans-serif;">*Notes:</h3><br>
+            <h3 style="color: #FFFFFF; font-family:'TNR', sans-serif; font-weight: normal;">
+            - The Management Fee is a monthly payment of £30 or a yearly payment of £360<br><br> 
+            - The Management plan includes 10 free minor edits and 2 free major edits per month. Other edits may incur more costs.<br>              <br></h3>
+            <h3 style="color: #FF0000; font-family: 'TNR', sans-serif; font-weight: normal;">
+            - Every <b>Macro</b> system requires a pre-payment of £100. The payment will be deducted from your total cost at the end of the service. You will be reminded of this before the beginning of the service. For more information, get in touch with <b><a id="AFA" class="glow-word">AFA</a></b>.
+            </h3><br>
 </div>
+
+<script>
+document.getElementById('AFA').addEventListener('click', () => {
+    (function(d, t) {
+        var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+        v.onload = function() {
+            // Initialize Voiceflow chat
+            window.voiceflow.chat.load({
+                verify: { projectID: '672f9a87dd74c835a2761c60' },
+                url: 'https://general-runtime.voiceflow.com',
+                versionID: 'production',
+                showInitialMessage: false,
+                showLauncher: false // Keep the launcher hidden
+            }).then(() => {
+                console.log('Voiceflow chat loaded successfully.');
+
+                // Open the chat programmatically when the button is clicked
+                window.voiceflow.chat.open();
+                console.log('Chat opened.');
+
+                // Ensure the launcher is removed in case it's injected
+                const removeLauncher = () => {
+                    const launcher = document.querySelector('.vf-chat-launcher');
+                    if (launcher) {
+                        launcher.remove();
+                        console.log('Launcher removed.');
+                    }
+                };
+
+                // Run the removal function immediately and periodically
+                removeLauncher();
+                setInterval(removeLauncher, 1000);
+            }).catch((error) => {
+                console.error('Error loading Voiceflow chat:', error);
+            });
+        };
+        v.src = 'https://cdn.voiceflow.com/widget/bundle.mjs'; // Load Voiceflow widget
+        v.type = 'module'; // Ensure the script loads as a module
+        s.parentNode.insertBefore(v, s); // Insert the script into the DOM
+    })(document, 'script');
+});
+</script>
+
+
+<!-- Media Query for Mobile Screens -->
+<style>
+    /* Default Styling for Desktop */
+    .vertical-line {
+        height: 500px; /* Set default height for desktop */
+        align-self: stretch; /* Ensure it stretches to content height */
+    }
+    @media (max-width: 768px) {
+        #plans > div {
+            flex-direction: column;
+            align-items: center;
+        }
+        #plans div > div {
+            margin: 20px 0;
+    }
+    .vertical-line {
+            height: 200px;/* Adjust height to fit mobile */
+        }
+
+        @media (max-width: 768px) {
+    #plans > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    #plans .vertical-line,
+    #plans div[style*="height: 2px"] {
+        display: none;
+    }
+
+    #plans div > div {
+        margin: 20px 0;
+    }
+}
+
+</style>
 </section>
 
-
+<!--AFA-->
 <script type="text/javascript">
     // Loading the Voiceflow widget asynchronously
     (function(d, t) {
