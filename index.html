@@ -788,7 +788,7 @@ document.getElementById('AFA').addEventListener('click', () => {
         v.onload = function() {
             // Initialize Voiceflow chat
             window.voiceflow.chat.load({
-                verify: { projectID: '672f9a87dd74c835a2761c60' },
+                verify: { projectID: '6793b7b8350d655370728ba7' },
                 url: 'https://general-runtime.voiceflow.com',
                 versionID: 'production',
                 showInitialMessage: false,
@@ -816,7 +816,7 @@ document.getElementById('AFA').addEventListener('click', () => {
                 console.error('Error loading Voiceflow chat:', error);
             });
         };
-        v.src = 'https://cdn.voiceflow.com/widget/bundle.mjs'; // Load Voiceflow widget
+        v.src = 'https://cdn.voiceflow.com/widget-next/bundle.mjs'; // Load Voiceflow widget
         v.type = 'module'; // Ensure the script loads as a module
         s.parentNode.insertBefore(v, s); // Insert the script into the DOM
     })(document, 'script');
@@ -871,7 +871,7 @@ document.getElementById('AFA').addEventListener('click', () => {
         var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
         v.onload = function() {
             window.voiceflow.chat.load({
-                verify: { projectID: '672f9a87dd74c835a2761c60' }, // AFA Voiceflow project ID
+                verify: { projectID: '6793b7b8350d655370728ba7' }, // AFA Voiceflow project ID
                 url: 'https://general-runtime.voiceflow.com',
                 versionID: 'production'
             }).then(() => {
@@ -893,7 +893,7 @@ document.getElementById('AFA').addEventListener('click', () => {
             }).catch(err => console.error("Error loading Voiceflow chat:", err));
         };
 
-        v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; 
+        v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; 
         v.type = "text/javascript"; 
         s.parentNode.insertBefore(v, s);
     })(document, 'script');
@@ -954,9 +954,9 @@ document.getElementById('AFA').addEventListener('click', () => {
       try {
         // Initialize Voiceflow Web Chat widget
         await window.voiceflow.chat.load({
-          verify: { projectID: '6792db7d018b19e306765623' },
+          verify: { projectID: '6793b7b8350d655370728ba7' },
           url: 'https://general-runtime.voiceflow.com',
-          versionID: 'development',
+          versionID: 'production',
           showInitialMessage: false,
           showLauncher: false,
         });
